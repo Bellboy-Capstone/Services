@@ -44,7 +44,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      DATABASE_URL: "postgresql://bpwZZwCHdcFoASKwsbBguAJeuwogtNia:nItaNvDq85xKZJYdfeHj4ncgRbG0TfvTbzJim4UNhfaeLAAfOBqwHPsMcDqm8Nrg@localhost/services"
+      DATABASE_URL: "postgresql://bpwZZwCHdcFoASKwsbBguAJeuwogtNia:nItaNvDq85xKZJYdfeHj4ncgRbG0TfvTbzJim4UNhfaeLAAfOBqwHPsMcDqm8Nrg@postgres/services"
       USE_DOCKER: "yes"
 
     steps:
