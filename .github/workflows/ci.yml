@@ -31,14 +31,22 @@ jobs:
       - name: Install flake8
         run: |
           python -m pip install --upgrade pip
-          pip install flake8
+          pip install flake8 black
 
       - name: Lint with flake8
-        run: flake8
+        run: flake8 .
+
+      - name: Run black formatter
+        run: black . --check
+
 
 # With no caching at all the entire ci process takes 4m 30s to complete!
   pytest:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: "postgresql://debug:debug@localhost/services"
+      USE_DOCKER: "yes"
+      
     steps:
 
       - name: Checkout Code Repository
