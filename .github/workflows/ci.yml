@@ -16,7 +16,7 @@ on:
 
 
 jobs:
-  flake8:
+  lint:
     runs-on: ubuntu-latest
     steps:
 
@@ -41,12 +41,12 @@ jobs:
 
 
 # With no caching at all the entire ci process takes 4m 30s to complete!
-  pytest:
+  test:
     runs-on: ubuntu-latest
     env:
       DATABASE_URL: "postgresql://debug:debug@localhost/services"
       USE_DOCKER: "yes"
-      
+
     steps:
 
       - name: Checkout Code Repository
