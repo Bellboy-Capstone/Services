@@ -24,7 +24,17 @@ Generally, to run the development environment, type `docker-compose -f local.yml
 These instructions are for Windows 10, which the majority of our team uses. If running on a better OS it is assumed that you are skilled enough to figure all this out by yourself.
 
 1. Install Docker Desktop from [this link](https://www.docker.com/products/docker-desktop). Ensure that you install the WSL2 binaries.
-2. To be continued.
+2. Ensure the WSL integrations are enabled, as seen in the screenshot below:
+    ![WSL integrations should be enabled in the docker dashboard](/readme/wsl-integrations.png)
+3. Ensure that everything works by running the following command:
+    ```sh
+    # Can be run in powershell or in WSL, but preferably WSL:
+    docker-compose -f local.yml run django pytest
+    ```
+
+Your system should now be ready to do basic development. Any changes you make will be hot-reloaded.
+
+
 
 ```sh
 # Install requirements:
@@ -34,7 +44,7 @@ pip install -r requirements.txt
 python3 -m pip install -r requirements.txt
 
 # Set up pre-commit
-pre-commit install 
+pre-commit install
 
 # Launch the Services component with docker
 docker-compose -f local.yml up
