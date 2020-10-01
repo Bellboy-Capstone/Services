@@ -15,7 +15,16 @@ Django Application for monitoring Bellboy devices, also provides a frontend for 
 
 To work on this repository, you'll need to download and install _Pycharm_ and _Docker Desktop_.
 
-To run the development environment, type `docker-compose -f local.yml up`
+Thanks to a convo with Sein, I've now included a collection of instructions for getting started and troubleshooting.
+
+Generally, to run the development environment, type `docker-compose -f local.yml up`
+
+### Setup
+
+These instructions are for Windows 10, which the majority of our team uses. If running on a better OS it is assumed that you are skilled enough to figure all this out by yourself.
+
+1. Install Docker Desktop from [this link](https://www.docker.com/products/docker-desktop). Ensure that you install the WSL2 binaries.
+2. To be continued.
 
 ```sh
 # Install requirements:
@@ -36,3 +45,7 @@ docker-compose -f local.yml run django pytest
 # Branch and start hacking!
 git checkout -b my-new-branch-name
 ```
+
+### Using the Services Docker Environment
+
+TBC
