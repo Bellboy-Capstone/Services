@@ -37,7 +37,7 @@ These instructions are for Windows 10, which the majority of our team uses. If r
 
 ```sh
 git checkout -b <new branch name>
-git push -u
+git push --set-upstream origin <new branch name>
 ```
 
 ### Developing with the Bellboy Services Docker Environment
