@@ -31,10 +31,24 @@ These instructions are for Windows 10, which the majority of our team uses. If r
     # Can be run in powershell or in WSL, but preferably WSL:
     docker-compose -f local.yml run django pytest
     ```
+    If all the unit tests pass, you're good to go! Your system should now be ready to do basic development. Any changes you make will be hot-reloaded.
 
-Your system should now be ready to do basic development. Any changes you make will be hot-reloaded.
+### Creating a New Branch
 
+```sh
+git checkout -b <new branch name>
+git push -u
+```
 
+### Developing with the Bellboy Services Docker Environment
+
+The database containers can also be accessed externally, allowing you to run `manage.py` commands from outside the container, but on Windows 10, it may be difficult to successfully install all of the django dependencies, especially `psycopg2`, and you should probably stick to running commands in the container like so:
+
+```sh
+docker-compose -f local.yml run django <your cmd here>
+```
+
+## Old Instructions
 
 ```sh
 # Install requirements:
@@ -55,7 +69,3 @@ docker-compose -f local.yml run django pytest
 # Branch and start hacking!
 git checkout -b my-new-branch-name
 ```
-
-### Using the Services Docker Environment
-
-TBC
