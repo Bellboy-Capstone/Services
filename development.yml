@@ -35,20 +35,20 @@ services:
     env_file:
       - ./.envs/.local/.postgres
 
-  docs:
-    image: services_local_docs
-    container_name: docs-bb
-    build:
-      context: .
-      dockerfile: ./compose/local/docs/Dockerfile
-    env_file:
-      - ./.envs/.local/.django
-    volumes:
-      - ./docs:/docs:z
-      - ./config:/app/config:z
-      - ./services:/app/services:z
-    ports:
-      - "7000:7000"
+#  docs:
+#    image: services_local_docs
+#    container_name: docs-bb
+#    build:
+#      context: .
+#      dockerfile: ./compose/local/docs/Dockerfile
+#    env_file:
+#      - ./.envs/.local/.django
+#    volumes:
+#      - ./docs:/docs:z
+#      - ./config:/app/config:z
+#      - ./services:/app/services:z
+#    ports:
+#      - "7000:7000"
 
   mailhog:
     image: mailhog/mailhog:v1.0.0
