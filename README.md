@@ -95,8 +95,6 @@ To add a new app, you'll need to do these things:
 
 <br />
 
-<br />
-
 ## Old Instructions
 
 ```sh
