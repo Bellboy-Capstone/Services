@@ -18,6 +18,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
     path("heartbeat/", include("services.heartbeat.urls", namespace="heartbeat")),
+    path("camera/", TemplateView.as_view(template_name="camera/base.html"),name="camera"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
