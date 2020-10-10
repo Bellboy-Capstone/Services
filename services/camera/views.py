@@ -14,6 +14,3 @@ class CameraView(APIView):
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
         return Response({"status": "OK", "received": data})
-
-
-
