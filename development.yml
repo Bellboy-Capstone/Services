@@ -10,7 +10,7 @@ services:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
     image: services_local_django
-    container_name: django
+    container_name: django-bb
     depends_on:
       - postgres
       - mailhog
@@ -28,30 +28,30 @@ services:
       context: .
       dockerfile: ./compose/production/postgres/Dockerfile
     image: services_production_postgres
-    container_name: postgres
+    container_name: postgres-bb
     volumes:
       - local_postgres_data:/var/lib/postgresql/data:Z
       - local_postgres_data_backups:/backups:z
     env_file:
       - ./.envs/.local/.postgres
 
-  docs:
-    image: services_local_docs
-    container_name: docs
-    build:
-      context: .
-      dockerfile: ./compose/local/docs/Dockerfile
-    env_file:
-      - ./.envs/.local/.django
-    volumes:
-      - ./docs:/docs:z
-      - ./config:/app/config:z
-      - ./services:/app/services:z
-    ports:
-      - "7000:7000"
+#  docs:
+#    image: services_local_docs
+#    container_name: docs-bb
+#    build:
+#      context: .
+#      dockerfile: ./compose/local/docs/Dockerfile
+#    env_file:
+#      - ./.envs/.local/.django
+#    volumes:
+#      - ./docs:/docs:z
+#      - ./config:/app/config:z
+#      - ./services:/app/services:z
+#    ports:
+#      - "7000:7000"
 
   mailhog:
     image: mailhog/mailhog:v1.0.0
-    container_name: mailhog
+    container_name: mailhog-bb
     ports:
       - "8025:8025"
