@@ -47,12 +47,10 @@ DATABASES["default"]["ATOMIC_REQUESTS"] = True
 ROOT_URLCONF = "config.urls"
 # https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = "config.wsgi.application"
-ASGI_APPLICATION = "config.routing.application"
 
 # APPS
 # ------------------------------------------------------------------------------
 DJANGO_APPS = [
-    "channels",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -62,7 +60,6 @@ DJANGO_APPS = [
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
     "django.forms",
-
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -78,7 +75,6 @@ LOCAL_APPS = [
     "services.users.apps.UsersConfig",
     # Your stuff: custom apps go here
     "services.heartbeat.apps.HeartbeatConfig",
-    "services.websocket.apps.WebsocketConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -287,14 +283,3 @@ REST_FRAMEWORK = {
 CORS_URLS_REGEX = r"^/api/.*$"
 # Your stuff...
 # ------------------------------------------------------------------------------
-#channels
-
-CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "asgi_redis.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("redis-server-name", 6379)],
-        },
-        "ROUTING": "config.routing.channel_routing",
-    },
-}
