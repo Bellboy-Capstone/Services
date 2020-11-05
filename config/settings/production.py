@@ -165,5 +165,6 @@ sentry_sdk.init(
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-# TODO: Remove localhost origin and replace with secure solution.
-CORS_ALLOWED_ORIGINS = ["https://bellboy-capstone.netlify.app", "http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["https://bellboy-capstone.netlify.app"]
+# TODO: Remove this in the future when security is an issue.
+CORS_ORIGIN_ALLOW_ALL = True
