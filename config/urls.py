@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from django.views.generic.base import RedirectView
 from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
@@ -20,7 +21,12 @@ urlpatterns = [
     path("users/", include("services.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
-    path("heartbeat/", include("services.heartbeat.urls", namespace="heartbeat")),
+    path("api/heartbeat/", include("services.heartbeat.urls", namespace="heartbeat")),
+    path(
+        "favicon.ico",
+        RedirectView.as_view(url="/static/images/favicons/favicon.ico", permanent=True),
+        name="favicon",
+    ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
