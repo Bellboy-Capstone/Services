@@ -9,6 +9,4 @@ router = DefaultRouter()
 router.register(r"device", BellboyDeviceViewSet, basename="device")
 router.register(r"status-update", StatusUpdateViewSet, basename="status-update")
 
-urlpatterns = [
-    path("", include(router.urls)),
-]
+urlpatterns = [path("", include(router.urls))]
