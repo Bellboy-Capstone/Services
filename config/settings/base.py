@@ -69,6 +69,9 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     "corsheaders",
+    "rest_auth",
+    "rest_auth.registration",
+    "drf_yasg",
 ]
 
 LOCAL_APPS = [
@@ -76,6 +79,7 @@ LOCAL_APPS = [
     # Your stuff: custom apps go here
     "services.heartbeat.apps.HeartbeatConfig",
     "services.bellboy.apps.BellboyConfig",
+    "services.swagger.apps.SwaggerConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -282,5 +286,7 @@ REST_FRAMEWORK = {
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
 CORS_URLS_REGEX = r"^/api/.*$"
+
 # Your stuff...
 # ------------------------------------------------------------------------------
+SITE_ID = 1
