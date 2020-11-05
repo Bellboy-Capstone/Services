@@ -20,6 +20,8 @@ Thanks to a convo with Sein, I've now included a collection of instructions for 
 
 Generally, to **run the development environment**, type `docker-compose -f development.yml up`
 
+Services API docs are hosted at <https://bellboy-services.herokuapp.com/swagger/>
+
 ### Setup
 
 **These instructions are for Windows 10, which the majority of our team uses. If running on a better OS it is assumed that you are skilled enough to figure all this out by yourself.**
