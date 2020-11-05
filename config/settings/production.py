@@ -165,4 +165,4 @@ sentry_sdk.init(
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-CORS_ALLOWED_ORIGINS = ["https://bellboy-capstone.netlify.app/"]
+CORS_ALLOWED_ORIGINS = ["bellboy-capstone.netlify.app"]
