@@ -27,6 +27,7 @@ urlpatterns = [
         RedirectView.as_view(url="/static/images/favicons/favicon.ico", permanent=True),
         name="favicon",
     ),
+    path("", include("services.swagger.urls", namespace="swagger")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
@@ -41,7 +42,6 @@ if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
     urlpatterns += [
-        path("", include("services.swagger.urls", namespace="swagger")),
         path(
             "400/",
             default_views.bad_request,
