@@ -71,6 +71,7 @@ THIRD_PARTY_APPS = [
     "corsheaders",
     "rest_auth",
     "rest_auth.registration",
+    "drf_yasg",
 ]
 
 LOCAL_APPS = [
@@ -78,6 +79,7 @@ LOCAL_APPS = [
     # Your stuff: custom apps go here
     "services.heartbeat.apps.HeartbeatConfig",
     "services.bellboy.apps.BellboyConfig",
+    "services.swagger.apps.SwaggerConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
