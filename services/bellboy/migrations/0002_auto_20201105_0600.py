@@ -7,19 +7,22 @@ import uuid
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('bellboy', '0001_initial'),
-    ]
+    dependencies = [("bellboy", "0001_initial")]
 
     operations = [
         migrations.AlterField(
-            model_name='bellboydevice',
-            name='identifier',
+            model_name="bellboydevice",
+            name="identifier",
             field=models.UUIDField(default=uuid.uuid4, editable=False, unique=True),
         ),
         migrations.AlterField(
-            model_name='statusupdate',
-            name='bellboy',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='status_updates', to='bellboy.BellboyDevice', to_field='identifier'),
+            model_name="statusupdate",
+            name="bellboy",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="status_updates",
+                to="bellboy.BellboyDevice",
+                to_field="identifier",
+            ),
         ),
     ]

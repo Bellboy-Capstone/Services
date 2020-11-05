@@ -4,14 +4,8 @@ from rest_framework.authentication import SessionAuthentication, TokenAuthentica
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 swagger_view = get_schema_view(
-    openapi.Info(
-        title="Bellboy Services Autodocs",
-        default_version="v1",
-    ),
+    openapi.Info(title="Bellboy Services Autodocs", default_version="v1"),
     public=True,
-    authentication_classes=(
-        TokenAuthentication,
-        SessionAuthentication,
-    ),
+    authentication_classes=(TokenAuthentication, SessionAuthentication),
     permission_classes=(IsAuthenticatedOrReadOnly,),
 )
