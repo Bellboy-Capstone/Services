@@ -22,6 +22,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
     path("api/heartbeat/", include("services.heartbeat.urls", namespace="heartbeat")),
+    path("bellboy/", include("services.bellboy.urls", namespace="bellboy")),
     path(
         "favicon.ico",
         RedirectView.as_view(url="/static/images/favicons/favicon.ico", permanent=True),

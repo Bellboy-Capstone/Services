@@ -1,8 +1,14 @@
-# from django.urls import path
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
 
-# from services.heartbeat.views import HeartbeatView
+from services.bellboy.views import BellboyDeviceViewSet, StatusUpdateViewSet
 
-# app_name = "heartbeat"
-# urlpatterns = [
-#     path("", view=HeartbeatView.as_view(), name="update"),
-# ]
+app_name = "bellboy"
+
+router = DefaultRouter()
+router.register(r"device", BellboyDeviceViewSet, basename="device")
+router.register(r"status-update", StatusUpdateViewSet, basename="status-update")
+
+urlpatterns = [
+    path("", include(router.urls)),
+]
