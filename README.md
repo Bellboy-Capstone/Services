@@ -9,8 +9,26 @@
 [![Python 3](https://pyup.io/repos/github/Bellboy-Capstone/Services/python-3-shield.svg)](https://pyup.io/repos/github/Bellboy-Capstone/Services/)
 
 
+Django Application for monitoring Bellboy devices, also provides a frontend for staff to monitor devices and interact with device users
 
-Django Application for monitoring Bellboy devices, also provides a frontend for staff to monitor devices and interact with device users.
+## Features
+
+This backend provides the following utilites for use by the Bellboy website and Bellboy devices:
+
+- Registry for Bellboy devices
+- Authentication for security users
+
+The repository uses the following technology to ensure quality:
+
+- PyUp.io monitors dependencies to ensure no vulnerabilities are present
+- Github Workflows run _pytest_ to ensure unit tests pass before a build on Heroku
+- Workflows for linting tools ensure the code follows best practices for quality and style:
+    - _Black_ enforces code style
+    - _Flake8_ checks for common errors
+    - _MyPy_ adds type checking to Python
+    - _iSort_ sorts imports to separate imports from stdlib, third party, and local sources
+    - An assortment of end-of-file, line-ending, and whitespace checks
+
 
 ## Development Instructions
 
