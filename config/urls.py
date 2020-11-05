@@ -21,7 +21,6 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
     path("heartbeat/", include("services.heartbeat.urls", namespace="heartbeat")),
-    path("websocket/", include("services.websocket.urls", namespace="websocket")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
@@ -31,8 +30,6 @@ urlpatterns += [
     # DRF auth token
     path("auth-token/", obtain_auth_token),
 ]
-
-
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
