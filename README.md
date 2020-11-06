@@ -66,6 +66,19 @@ git checkout -b <new branch name>
 git push --set-upstream origin <new branch name>
 ```
 
+### Submitting Work
+
+When adding new features, please use the semantic commit labels so versioning is accurate:
+
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation only changes
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **perf**: A code change that improves performance
+- **test**: Adding missing or correcting existing tests
+- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
 ### Developing with the Bellboy Services Docker Environment
 
 The database containers can also be accessed externally, allowing you to run `manage.py` commands from outside the container, but on Windows 10, it may be difficult to successfully install all of the django dependencies, especially `psycopg2`, and you should probably stick to running commands in the container like so:
