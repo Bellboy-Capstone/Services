@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2020-11-07)
+### Fix
+* Bump DRF to 3.12.2 ([`bbffd26`](https://github.com/Bellboy-Capstone/Services/commit/bbffd2616a1e23587ed4f0b924b713820c628195))
+
+### Documentation
+* Add semantic release info to dev section. ([`ec5d5eb`](https://github.com/Bellboy-Capstone/Services/commit/ec5d5ebc973f1fd908f36b6ad1be0ff7fa5c995e))
+
 ## v0.2.0 (2020-11-06)
 ### Feature
 * Add Semantic Release to CI. ([`65fdea8`](https://github.com/Bellboy-Capstone/Services/commit/65fdea85787e677eeef726d1a5e7db74a464fc99))
