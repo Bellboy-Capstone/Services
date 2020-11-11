@@ -6,3 +6,4 @@ app_name = "heartbeat"
 urlpatterns = [
     path("", view=HeartbeatView.as_view(), name="update"),
 ]
+
