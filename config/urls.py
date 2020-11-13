@@ -28,6 +28,7 @@ urlpatterns = [
         RedirectView.as_view(url="/static/images/favicons/favicon.ico", permanent=True),
         name="favicon",
     ),
+    path("", include("services.swagger.urls", namespace="swagger")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
