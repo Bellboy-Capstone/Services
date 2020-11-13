@@ -1,1 +1,1 @@
-default_app_config = 'services.websocket.apps.WebsocketConfig'
+default_app_config = "services.websocket.apps.WebsocketConfig"
