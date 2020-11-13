@@ -13,6 +13,7 @@ urlpatterns = [
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
+    path("websocket-page/", TemplateView.as_view(template_name="websocket/base.html")),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
@@ -23,6 +24,7 @@ urlpatterns = [
     # Your stuff: custom urls includes go here
     path("api/heartbeat/", include("services.heartbeat.urls", namespace="heartbeat")),
     path("bellboy/", include("services.bellboy.urls", namespace="bellboy")),
+    path("websocket/", include("services.websocket.urls", namespace="websocket")),
     path(
         "favicon.ico",
         RedirectView.as_view(url="/static/images/favicons/favicon.ico", permanent=True),
