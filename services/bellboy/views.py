@@ -54,4 +54,4 @@ class PublicStatusUpdateViewSet(
     serializer_class = StatusUpdateSerializer
     authentication_classes = [TokenAuthentication, SessionAuthentication]
     permission_classes = [AllowAny]
-    queryset = StatusUpdate.objects.all()
+    queryset = StatusUpdate.objects.order_by("-created")
