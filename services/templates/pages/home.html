@@ -1,1 +1,27 @@
 {% extends "base.html" %}
+{% block title %}
+{% block head_title %}
+Services
+{% endblock head_title %}
+{% endblock title %}
+
+{% block content %}
+<br/>
+<h1>Services API</h1>
+<br/>
+<p>Welcome to the API endpoint for the <b>Bellboy</b> capstone project.</p>
+<br/>
+<p>This API provides endpoints for long-term storage and analysis of Bellboy data.
+  Please view the <a href="/swagger" target="_blank">interactive API documentation</a> to view
+  the endpoints this service exposes to the bellboy devices and frontend
+  for logging, security, and data retrieval.</p>
+<p>For more info on the project, please view the
+  <a href="https://bellboy-capstone.github.io/" target="_blank">information site.</a>
+</p>
+<br/>
+<br/>
+<p>If you have any questions, don't hesitate to
+  <a href="https://bellboy-capstone.github.io/#contact" target="_blank">contact us.</a>
+</p>
+<p><i>Bellboy Team</i></p>
+{% endblock %}
