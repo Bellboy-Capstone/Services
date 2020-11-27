@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2020-11-27)
+### Feature
+* Improve landing page. ([`15d4dab`](https://github.com/Bellboy-Capstone/Services/commit/15d4dab663d96cde833259c69ab3a5509a7925ce))
+
 ## v0.2.1 (2020-11-07)
 ### Fix
 * Bump DRF to 3.12.2 ([`bbffd26`](https://github.com/Bellboy-Capstone/Services/commit/bbffd2616a1e23587ed4f0b924b713820c628195))
