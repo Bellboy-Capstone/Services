@@ -283,7 +283,7 @@ REST_FRAMEWORK = {
     # Changed from IsAuthenticated to AllowAny for open endpoints.
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.AllowAny",),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 20,
+    "PAGE_SIZE": 200,
 }
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
